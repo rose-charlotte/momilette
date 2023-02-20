@@ -1,5 +1,6 @@
 import { List } from "@mui/material";
 import { useSelector } from "react-redux";
+import { Button } from "../common/Button";
 import { TodoListItem } from "./TodoListItem";
 
 export function TodoList() {
@@ -8,6 +9,7 @@ export function TodoList() {
     console.log(todos);
 
     return (
+        <>
         <List sx={{ bgcolor: "background.paper" }}>
             {todos.map(todo => (
                 <TodoListItem
@@ -16,5 +18,7 @@ export function TodoList() {
                 />
             ))}
         </List>
+        <Button />
+        </>
     );
 }
